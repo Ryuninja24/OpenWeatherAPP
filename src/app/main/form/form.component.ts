@@ -15,9 +15,7 @@ export class FormComponent implements OnInit {
     this.sharedService._getWeather(zip)
     .subscribe(
       (data) => {
-        // console.log(data);
-        console.log(data.weather[0].description);
-        console.log(data.weather[0].main);
+        console.log(data);
 
         this.sharedService._localDescription.description = data.weather[0].description;
         this.sharedService._localDescription.icon = data.weather[0].icon;
