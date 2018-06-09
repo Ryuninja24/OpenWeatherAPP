@@ -15,10 +15,11 @@ export class FormComponent implements OnInit {
     this.sharedService._getWeather(zip)
     .subscribe(
       (data) => {
-        // console.log(data);
+        console.log(data);
         this.sharedService._localData.temp = data.main.temp;
         this.sharedService._localData.humidity = data.main.humidity;
         this.sharedService._localData.name = data.name;
+        this.sharedService._localData.pressure = data.main.pressure;
       }
     );
   }

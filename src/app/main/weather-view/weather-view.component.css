@@ -2,3 +2,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+p {
+  text-align: center;
+  color: white;
+}
+
+div {
+  border:1px solid #FF8C00;
+  border-top: none;
+}

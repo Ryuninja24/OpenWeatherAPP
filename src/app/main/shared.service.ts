@@ -10,7 +10,8 @@ export class SharedService {
   _localData = {
     temp: Number,
     humidity: Number,
-    name: String
+    name: String,
+    pressure: Number
   };
 
   constructor(private http: Http) { }
