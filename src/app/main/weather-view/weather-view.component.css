@@ -1,14 +1,22 @@
 .WeatherInfoContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-top: 10%;
 }
+
+
 
 p {
   text-align: center;
+  border:2px solid #FF8C00;
+  background-color: #FF8C00;
   color: white;
 }
 
-div {
-  border:1px solid #FF8C00;
-  border-top: none;
+.info {
+  border:2px solid #FF8C00;
+  border-radius: 5px;
 }

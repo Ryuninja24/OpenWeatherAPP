@@ -14,6 +14,12 @@ export class SharedService {
     pressure: Number
   };
 
+  _localDescription = {
+    main: String,
+    description: String,
+    icon: String
+  };
+
   constructor(private http: Http) { }
   _getWeather(zip: String) {
     // tslint:disable-next-line:max-line-length

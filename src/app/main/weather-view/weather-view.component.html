@@ -1,18 +1,24 @@
 <div class="WeatherInfoContainer">
-  <div>
+  <div class="info city">
     <p>City</p>
     <p> {{ this.sharedService._localData.name }} </p>
   </div>
-  <div>
+  <div class="info temp">
     <p>Temp</p>
     <p> {{ this.sharedService._localData.temp }} </p>
   </div>
-  <div>
+  <div class="info humidity">
     <p>Humidity</p>
     <p>{{ this.sharedService._localData.humidity }}</p>
   </div>
-  <div>
+  <div class="info pressure">
     <p>Pressure</p>
     <p>{{ this.sharedService._localData.pressure }}</p>
+  </div>
+  <div class="info main">
+    <p> {{ this.sharedService._localDescription.main }} </p>
+  </div>
+  <div class="info description">
+    <p> {{ this.sharedService._localDescription.description }} </p>
   </div>
 </div>
