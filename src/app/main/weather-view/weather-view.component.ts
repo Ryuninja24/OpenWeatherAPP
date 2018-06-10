@@ -8,7 +8,5 @@ import { SharedService } from '../shared.service';
 })
 export class WeatherViewComponent implements OnInit {
   constructor(private sharedService: SharedService) { }
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -1,4 +1,4 @@
-<div class="WeatherInfoContainer">
+<div *ngIf="this.sharedService._showWeather" class="WeatherInfoContainer">
   <div class="info city">
     <p>City</p>
     <p> {{ this.sharedService._localData.name }} </p>
