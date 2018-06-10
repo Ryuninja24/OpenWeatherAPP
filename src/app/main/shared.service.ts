@@ -19,6 +19,8 @@ export class SharedService {
     description: String,
     icon: String
   };
+  
+  icon: string;
 
   _showWeather = false;
 
