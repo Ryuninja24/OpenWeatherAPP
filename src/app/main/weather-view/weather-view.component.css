@@ -4,10 +4,10 @@
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  margin-top: 10%;
+  margin-top: 5%;
   grid-template-areas: 
-  " f t t . "
-  " f t t . ";
+  " f t t t "
+  " f t t t ";
 }
 
 .dayForcast {
@@ -22,18 +22,20 @@
 
 p {
   color: white;
+  margin: 10px;
 }
 
 .info {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: 
   " . c i . "
   " . t td . "
   " . h hd . "
   " . p pd . "
-  " . d dd . ";
+  " . d dd . "
+  " . v vd . ";
   border: 2px solid #FF8C00;
   border-radius: 5px;
 }
@@ -80,4 +82,12 @@ p {
 
 .descriptionData {
   grid-area: dd;
+}
+
+.visibility {
+  grid-area: v;
+}
+
+.visibilityData {
+  grid-area: vd;
 }

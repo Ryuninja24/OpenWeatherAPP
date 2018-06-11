@@ -21,6 +21,7 @@ export class SharedService {
   };
 
   icon: string;
+  visibility: string;
 
   _showWeather = false;
 
