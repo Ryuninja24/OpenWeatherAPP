@@ -5,19 +5,79 @@
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   margin-top: 10%;
+  grid-template-areas: 
+  " f t t . "
+  " f t t . ";
 }
 
+.dayForcast {
+  grid-area: t;
+}
 
+.weeklyForcast {
+  grid-area: f;
+  border:2px solid #FF8C00;
+  border-radius: 5px;
+}
 
 p {
-  margin: 0px;
-  text-align: center;
-  border:2px solid #FF8C00;
-  background-color: #FF8C00;
   color: white;
 }
 
 .info {
-  border:2px solid #FF8C00;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  " . c i . "
+  " . t td . "
+  " . h hd . "
+  " . p pd . "
+  " . d dd . ";
+  border: 2px solid #FF8C00;
   border-radius: 5px;
+}
+
+.data {
+  margin-left: 20%;
+}
+
+.city {
+  grid-area: c;
+}
+
+.weatherIcon {
+  grid-area: i;
+}
+
+.temp {
+  grid-area: t;
+}
+
+.tempData {
+  grid-area: td;
+}
+
+.humidity {
+  grid-area: h;
+}
+
+.humidityData {
+  grid-area: hd;
+}
+
+.pressure {
+  grid-area: p;
+}
+
+.pressureData {
+  grid-area: pd;
+}
+
+.description {
+  grid-area: d;
+}
+
+.descriptionData {
+  grid-area: dd;
 }

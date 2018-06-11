@@ -1,30 +1,22 @@
 <div *ngIf="this.sharedService._showWeather" class="WeatherInfoContainer">
-  <div class="info city">
-    <p>City</p>
-    <p> {{ this.sharedService._localData.name }} </p>
+  <div class="weeklyForcast">
+    <p>hello</p>
   </div>
-  <div class="info temp">
-    <p>Temp</p>
-    <p> {{ this.sharedService._localData.temp }} </p>
-  </div>
-  <div class="info humidity">
-    <p>Humidity</p>
-    <p>{{ this.sharedService._localData.humidity }}</p>
-  </div>
-  <div class="info pressure">
-    <p>Pressure</p>
-    <p>{{ this.sharedService._localData.pressure }}</p>
-  </div>
-  <div class="info main">
-    <p>Main</p>
-    <p> {{ this.sharedService._localDescription.main }} </p>
-  </div>
-  <div class="info description">
-    <p>Description</p>
-    <p> {{ this.sharedService._localDescription.description }} </p>
-  </div>
-  <div class="info icon">
-    <p>Icon</p>
-    <img src= "{{ this.sharedService.icon }}" alt="">
+  <div class="info dayForcast">
+    <p class="city">{{ this.sharedService._localData.name }}</p>
+    <img class="data weatherIcon" src= "{{ this.sharedService.icon }}">
+    
+    <p class="temp">Temperature:</p>
+    <p class="data tempData">{{ this.sharedService._localData.temp }}</p>
+    
+    <p class="humidity">Humidity: </p>
+    <p class="data humidityData">{{ this.sharedService._localData.humidity }}</p>
+    
+    <p class="pressure">Pressure: </p>
+    <p class="data pressureData">{{ this.sharedService._localData.pressure }}</p>
+    
+    <p class="description"> {{ this.sharedService._localDescription.main }}, </p>
+    <p class="data descriptionData">{{ this.sharedService._localDescription.description }}</p>
+    
   </div>
 </div>
