@@ -37,8 +37,8 @@ export class SharedService {
     ));
   }
   _getWeekWeather(zip: String) {
-    return this.http.get('http://api.openweathermap.org/data/2.5/forecast?zip=' 
-    + zip + ',us&APPID=79f9ea577e4ab0eb2fccd51913b6b075')
+    return this.http.get('http://api.openweathermap.org/data/2.5/forecast?zip='
+    + zip + ',us&units=imperial&APPID=79f9ea577e4ab0eb2fccd51913b6b075')
     .pipe(map(
       (response: Response) => {
         return response.json();
