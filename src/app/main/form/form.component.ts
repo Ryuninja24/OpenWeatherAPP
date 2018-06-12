@@ -23,7 +23,7 @@ export class FormComponent implements OnInit {
         this.sharedService._localData.humidity = data.main.humidity;
         this.sharedService._localData.name = data.name;
         this.sharedService._localData.pressure = data.main.pressure;
-        this.sharedService.visibility = data.visibility;
+        this.sharedService.visibility = Math.round((data.visibility / 1609.344) * 100) / 100;
       }
     );
   }
