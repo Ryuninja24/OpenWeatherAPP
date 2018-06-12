@@ -7,7 +7,6 @@
   margin-top: 5%;
   grid-template-areas: 
   " f t t t "
-  " f t t t ";
 }
 
 .dayForcast {

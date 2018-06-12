@@ -11,8 +11,8 @@ export class FormComponent implements OnInit {
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {}
-  onGet(zip: String) {
-    this.sharedService._getWeather(zip)
+  dayGet(zip: String) {
+    this.sharedService._getDayWeather(zip)
     .subscribe(
       (data) => {
         console.log(data);
@@ -23,8 +23,15 @@ export class FormComponent implements OnInit {
         this.sharedService._localData.humidity = data.main.humidity;
         this.sharedService._localData.name = data.name;
         this.sharedService._localData.pressure = data.main.pressure;
-
         this.sharedService.visibility = data.visibility;
+      }
+    );
+  }
+  weekGet(zip: String) {
+    this.sharedService._getWeekWeather(zip)
+    .subscribe(
+      (data) => {
+        console.log(data);
       }
     );
   }

@@ -26,12 +26,21 @@ export class SharedService {
   _showWeather = false;
 
   constructor(private http: Http) { }
-  _getWeather(zip: String) {
-    // tslint:disable-next-line:max-line-length
-    return this.http.get('http://api.openweathermap.org/data/2.5/weather?zip=' + zip + ',us&units=imperial&APPID=79f9ea577e4ab0eb2fccd51913b6b075')
+  _getDayWeather(zip: String) {
+    return this.http.get('http://api.openweathermap.org/data/2.5/weather?zip='
+    + zip + ',us&units=imperial&APPID=79f9ea577e4ab0eb2fccd51913b6b075')
     .pipe(map(
       (response: Response) => {
         this._showWeather = true;
+        return response.json();
+      }
+    ));
+  }
+  _getWeekWeather(zip: String) {
+    return this.http.get('http://api.openweathermap.org/data/2.5/forecast?zip=' 
+    + zip + ',us&APPID=79f9ea577e4ab0eb2fccd51913b6b075')
+    .pipe(map(
+      (response: Response) => {
         return response.json();
       }
     ));
